@@ -51,7 +51,7 @@ GET https://login.windows.net/TENTAND_ID/oauth2/authorize?resource=RESOURCE_UI&c
 Which returns the interactive auth form on login.windows.net. Once the user is authenticated, a POST request is made from the browser to get the authorization code:
 
 {% highlight http %}
-POST https://login.windows.net/<TENANT_ID>/wsfederation HTTP/1.1
+POST https://login.windows.net/TENANT_ID/wsfederation HTTP/1.1
 {% endhighlight %}
 
 But the code is passed directly to the application as a query string parameter since a redirect instruction is returned in the response. The OS should handle application switching:
@@ -64,7 +64,7 @@ Location: REDIRECT_URI/?code=AUTHORIZATION_CODE
 The application can then issue a request with the authorization code to get the access token. Grant type (= "authorization_code"), the actual authorization code, client id, redirect uri and resource are passed into the request body:
 
 {% highlight http %}
-POST https://login.windows.net/c9c8d837-ca0b-4ebd-88a5-ff578008c93d/oauth2/token HTTP/1.1
+POST https://login.windows.net/TENANT_ID/oauth2/token HTTP/1.1
 
 resource=ORG_NAME.crm.dynamics.com&client_id=CLIENT_ID&grant_type=authorization_code&code=AUTHORIZATION_CODE&redirect_uri=REDIRECT_URI
 {% endhighlight %}
@@ -74,6 +74,7 @@ The response will be a JSON object containing the access token. Also, refresh to
 {% highlight http %}
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
+
 {"token_type":"Bearer","expires_in":"3600","expires_on":"1234567890","not_before":"1234567890","resource":"https://ORG_NAME.crm.dynamics.com","access_token":"ACCESS_TOKEN","refresh_token":"REFRESH_TOKEN","scope":"user_impersonation","id_token":"ID_TOKEN","pwd_exp":"1234567","pwd_url":"https://portal.microsoftonline.com/ChangePassword.aspx"}
 {% endhighlight %}
 
