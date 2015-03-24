@@ -10,7 +10,7 @@ github_username:  sharpshooting
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
+#highlighter: rouge
 
 analytics:
   provider: google
