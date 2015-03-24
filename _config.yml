@@ -2,7 +2,7 @@
 title: SharpShooting
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Yet another technology blog. :-)
+  A blog about software development, mobile apps, cloud services and CRM.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://sharpshooting.github.io" # the base hostname & protocol for your site
 twitter_username: chemendonca

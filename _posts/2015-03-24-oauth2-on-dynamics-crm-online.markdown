@@ -1,11 +1,8 @@
 ---
 layout: post
 title:  "OAuth 2.0 with Dynamics CRM Online"
-date:   2015-03-23 14:03:00
-categories:
-- crm
-- mobile
-- authentication
+date:   2015-03-24 00:35:00
+categories: authentication
 ---
 Authentication on Dynamics CRM Online follows an OAuth 2.0 authorization code grant flow and is fairly straightforward. There are many libraries that handle OAuth 2.0 such as <a href="https://msdn.microsoft.com/en-us/library/azure/dn151135.aspx" target="_blank">Microsoft ADAL</a>, but it can be useful to understand what's happening under the hood.
 
