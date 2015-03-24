@@ -11,3 +11,8 @@ github_username:  sharpshooting
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+analytics:
+  provider: google
+  google:
+    tracking_id: 'UA-61112379-1'
