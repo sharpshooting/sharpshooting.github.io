@@ -11,3 +11,6 @@ github_username:  sharpshooting
 # Build settings
 markdown: kramdown
 #highlighter: rouge
+
+gems:
+- jekyll-sitemap
