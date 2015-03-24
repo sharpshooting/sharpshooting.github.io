@@ -16,3 +16,8 @@ analytics:
   provider: google
   google:
     tracking_id: 'UA-61112379-1'
+
+comments:
+  provider: disqus
+  disqus:
+    short_name: sharpshooting
