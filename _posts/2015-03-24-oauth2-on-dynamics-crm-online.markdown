@@ -4,6 +4,8 @@ title:  "OAuth 2.0 with Dynamics CRM Online"
 date:   2015-03-24 00:35:00
 categories: authentication
 ---
+{% include analytics.html %}
+
 Authentication on Dynamics CRM Online follows an OAuth 2.0 authorization code grant flow and is fairly straightforward. There are many libraries that handle OAuth 2.0 such as <a href="https://msdn.microsoft.com/en-us/library/azure/dn151135.aspx" target="_blank">Microsoft ADAL</a>, but it can be useful to understand what's happening under the hood.
 
 # Initial configuration #
@@ -81,3 +83,5 @@ Every subsequent request to the service needs to include the access token as suc
 GET https://ORG_NAME.crm.dynamics.com/xrmservices/2011/organizationdata.svc/ContactSet HTTP/1.1
 Authorization: Bearer ACCESS_TOKEN
 {% endhighlight %}
+
+{% include disqus.html %}
