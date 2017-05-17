@@ -3,6 +3,7 @@ layout: post
 title:  "Installing Elixir on Windows 10 Creators Update with Ubuntu on WSL"
 date:   2017-05-14 16:24:00
 categories: wsl
+hidden: true
 ---
 
 I've been following Josh Adam's Elixir episodes on DailyDrip as he builds the Firestorm forum. For the exercises, I decided to setup my Elixir dev environment on Windows 10, but using Windows Subsystem for Linux, which is working much better after Creators Update.
